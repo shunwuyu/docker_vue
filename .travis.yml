@@ -10,4 +10,6 @@ before_install:
 script:
   - npm run build
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  docker build -t shunwuyu2019/try-vue:latest
+  docker build -t shunwuyu2019/try-vue:latest .
+  - docker push shunwuyu2019/try-vue:latest
+  
